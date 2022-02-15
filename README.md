@@ -1,8 +1,7 @@
 ![Secret Sauce AI](https://github.com/secretsauceai/secret_sauce_ai/blob/main/SSAI_logo_2.3_compressed_cropped.png?raw=true)
-# Precise Wakeword Model Maker
+# Wakeword Data Collector
 ![Wake word](https://github.com/secretsauceai/secret_sauce_ai/blob/main/SSAI_wakeword_scene_compressed.png?raw=true)
 ## Do you want your own personal wake word?
-# Wakeword Data Collector
 Prototype CLI to record wakewords, non-wakewords, and background noise written in python. Think of it as your wakeword data collection recipe for creating bullet proof wakeword models. 
 
 ## Installation
