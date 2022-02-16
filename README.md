@@ -2,7 +2,7 @@
 # Wakeword Data Collector
 ![Wake word](https://github.com/secretsauceai/secret_sauce_ai/blob/main/SSAI_wakeword_scene_compressed.png?raw=true)
 ## Do you want your own personal wake word?
-Wakeword Data Collector is a prototype CLI to record wakewords, non-wakewords, and background noise written in python. Think of it as your wakeword data collection recipe for creating bullet proof wakeword models. 
+Wakeword Data Collector is a prototype CLI to record wakewords, non-wakewords, and background noise written in python. Think of it as your wakeword data collection recipe for creating bullet proof wakeword models. It's part of the Secret Sauce AI [Wakeword Project](https://github.com/secretsauceai/secret_sauce_ai/wiki/Wakeword-Project).
 
 ![wakeword data collector wakeword collection example](https://github.com/secretsauceai/secret_sauce_ai/blob/main/SSAI_ww_collector_01.1.gif)
 
@@ -52,3 +52,11 @@ If you are doing a data collection to add another user it is recommended to reco
 * It is best to use a wakeword with at least three syllables.
 * Make sure to check each recording, it is always possible something went wrong. Even one bad or missing recording can be the difference between a bullet proof and a bullet ridden wakeword model. 
 * After collecting your data, it is highly recommended to run the [Precise Wakeword Model Maker](https://github.com/secretsauceai/precise-wakeword-model-maker).
+
+## Secret Sauce AI
+* [Overview](https://github.com/secretsauceai/secret_sauce_ai)
+* [Wakeword Project](https://github.com/secretsauceai/secret_sauce_ai/wiki/Wakeword-Project)
+ * [Precise Wakeword Model Maker](https://github.com/secretsauceai/precise-wakeword-model-maker) 
+ * [Precise TensorFlow Lite Engine](https://github.com/OpenVoiceOS/precise_lite_runner)
+ * [Precise Rust Engine](https://github.com/sheosi/precise-rs)
+ * [SpeechPy MFCC in Rust](https://github.com/secretsauceai/mfcc-rust)
