@@ -60,3 +60,6 @@ If you are doing a data collection to add another user it is recommended to reco
     * [Precise TensorFlow Lite Engine](https://github.com/OpenVoiceOS/precise_lite_runner)
     * [Precise Rust Engine](https://github.com/sheosi/precise-rs)
     * [SpeechPy MFCC in Rust](https://github.com/secretsauceai/mfcc-rust)
+
+### Special thanks
+Although Secret Sauce AI is always about collaboration and community, special thanks should go to [Dan "The Man" Borufuka](https://github.com/polygoat/) for his support since day one. Thanks, Dan! 
