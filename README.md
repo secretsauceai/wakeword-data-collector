@@ -18,17 +18,14 @@ Simply run `collect_ide.py` in your console and follow the instructions.
 python collect_ide.py
 ```
 
-## Tips to improve your model
-* After collecting your data, it is highly recommended to run the [Precise Wakeword Model Maker](https://github.com/secretsauceai/precise-wakeword-model-maker).
-* Use several TTS systems to gather more wake word samples.
-For example you could use [kukarella](https://www.kukarella.com/). Is there perhaps a better resource?
-* To lower the number of 'false wake ups' after you have trained your model with your collected audio and TTS samples, iteratively train over the following audio data sets:
+After collecting your data, it is highly recommended to run the [Precise Wakeword Model Maker](https://github.com/secretsauceai/precise-wakeword-model-maker).
 
-    * [Mycroft noise data](https://github.com/MycroftAI/Precise-Community-Data/tree/master/not-wake-words/noises)
-    * [public domain sounds](http://pdsounds.tuxfamily.org/)
-    * [OpenPathMusic44V5](https://archive.org/details/OpenPathMusic44V5)
-    * [audiocheck.net sweeps and noises](https://www.audiocheck.net/testtones_index.php) 
-
-     If your model uses voices from several people, you might need to add in voice data sets into your iterative training:
-    * [Mozilla Common Voice EN](https://commonvoice.mozilla.org/en/datasets) (only need roughly the first 30k not the entire 56GB). 
-    * [precise community data not-wake](https://github.com/MycroftAI/Precise-Community-Data/tree/master/not-wake-words)
+## General
+The Wakeword Data Collector records wave files with a sample rate of `16000` for two main categories of data:
+* Wakewords (ie 'hey Jarvis')
+* Wakeword variations (ie saying 'hey jarvis' further/closer to the mic, faster, or slower)
+* Not-wakewords
+   * background noise recordings
+   * syllables (ie 'hey, jar, vis')
+   * combinations of syllable pairs (ie 'hey jar', 'jarvis')
+   * other longer recordings: recording the TV and a natural conversation
