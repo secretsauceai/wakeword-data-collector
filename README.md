@@ -49,6 +49,6 @@ If you are doing a data collection to add another user it is recommended to reco
 
 
 ### IMPORTANT
-Make sure to check each recording, it is always possible something went wrong. Even one bad or missing recording can be the difference between a bullet proof and a bullet ridden wakeword model. 
-
-After collecting your data, it is highly recommended to run the [Precise Wakeword Model Maker](https://github.com/secretsauceai/precise-wakeword-model-maker).
+* It is best to use a wakeword with at least three syllables.
+* Make sure to check each recording, it is always possible something went wrong. Even one bad or missing recording can be the difference between a bullet proof and a bullet ridden wakeword model. 
+* After collecting your data, it is highly recommended to run the [Precise Wakeword Model Maker](https://github.com/secretsauceai/precise-wakeword-model-maker).
