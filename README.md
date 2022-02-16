@@ -4,6 +4,7 @@
 ## Do you want your own personal wake word?
 Prototype CLI to record wakewords, non-wakewords, and background noise written in python. Think of it as your wakeword data collection recipe for creating bullet proof wakeword models. 
 
+![wakeword data collector wakeword collection example](https://github.com/secretsauceai/secret_sauce_ai/blob/main/SSAI_ww_collector_01.1.gif)
 ## Installation
 As usual once you have cloned the repo, it is recommended to create and activate python virtual environment.
 ```console
