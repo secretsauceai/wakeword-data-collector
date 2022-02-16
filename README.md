@@ -22,10 +22,10 @@ After collecting your data, it is highly recommended to run the [Precise Wakewor
 
 ## General
 The Wakeword Data Collector records wave files with a sample rate of `16000` for two main categories of data:
-* Wakewords (ie 'hey Jarvis')
-  * Wakeword variations (ie saying 'hey jarvis' further/closer to the mic, faster, or slower)
-* Not-wakewords
-   * background noise recordings
-   * syllables (ie 'hey, jar, vis')
-   * combinations of syllable pairs (ie 'hey jar', 'jarvis')
-   * other longer recordings: recording the TV and a natural conversation
+* Wakewords (ie 'hey Jarvis') `audio/wake-word/`
+  * Wakeword variations (ie saying 'hey jarvis' further/closer to the mic, faster, or slower) `audio/wake-word/variations`
+* Not-wakewords `audio/not-wake-word/`
+   * background noise recordings `audio/not-wake-word/background/`
+   * syllables (ie 'hey, jar, vis') `audio/not-wake-word/syllables/`
+   * combinations of syllable pairs (ie 'hey jar', 'jarvis') `audio/not-wake-word/parts`
+   * other longer recordings: recording the TV and a natural conversation `audio/not-wake-word/`
