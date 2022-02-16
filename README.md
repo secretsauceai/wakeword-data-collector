@@ -54,7 +54,7 @@ If you are doing a data collection to add another user it is recommended to reco
 * After collecting your data, it is highly recommended to run the [Precise Wakeword Model Maker](https://github.com/secretsauceai/precise-wakeword-model-maker).
 
 ## Secret Sauce AI
-* [Overview](https://github.com/secretsauceai/secret_sauce_ai)
+* [Secret Sauce AI Overview](https://github.com/secretsauceai/secret_sauce_ai)
 * [Wakeword Project](https://github.com/secretsauceai/secret_sauce_ai/wiki/Wakeword-Project)
     * [Precise Wakeword Model Maker](https://github.com/secretsauceai/precise-wakeword-model-maker) 
     * [Precise TensorFlow Lite Engine](https://github.com/OpenVoiceOS/precise_lite_runner)
