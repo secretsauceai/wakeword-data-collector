@@ -62,4 +62,4 @@ If you are doing a data collection to add another user it is recommended to reco
     * [SpeechPy MFCC in Rust](https://github.com/secretsauceai/mfcc-rust)
 
 ### Special thanks
-Although Secret Sauce AI is always about collaboration and community, special thanks should go to [Dan "The Man" Borufuka](https://github.com/polygoat/) for his support since day one. Thanks, Dan! 
+Although Secret Sauce AI is always about collaboration and community, special thanks should go to [Dan "The Man" Borufka](https://github.com/polygoat/) for his support since day one. Thanks, Dan! 
