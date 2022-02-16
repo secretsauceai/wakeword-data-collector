@@ -26,6 +26,6 @@ The Wakeword Data Collector records wave files with a sample rate of `16000` for
   * Wakeword variations (ie saying 'hey jarvis' further/closer to the mic, faster, or slower) `audio/wake-word/variations`
 * Not-wakewords `audio/not-wake-word/`
    * background noise recordings `audio/not-wake-word/background/`
-   * syllables (ie 'hey, jar, vis') `audio/not-wake-word/syllables/`
-   * combinations of syllable pairs (ie 'hey jar', 'jarvis') `audio/not-wake-word/parts`
+   * syllables (ie 'hey, jar, vis') `audio/not-wake-word/parts/`
+   * combinations of syllable pairs (ie 'hey jar', 'jarvis') `audio/not-wake-word/parts/`
    * other longer recordings: recording the TV and a natural conversation `audio/not-wake-word/`
