@@ -56,7 +56,7 @@ If you are doing a data collection to add another user it is recommended to reco
 ## Secret Sauce AI
 * [Overview](https://github.com/secretsauceai/secret_sauce_ai)
 * [Wakeword Project](https://github.com/secretsauceai/secret_sauce_ai/wiki/Wakeword-Project)
- * [Precise Wakeword Model Maker](https://github.com/secretsauceai/precise-wakeword-model-maker) 
- * [Precise TensorFlow Lite Engine](https://github.com/OpenVoiceOS/precise_lite_runner)
- * [Precise Rust Engine](https://github.com/sheosi/precise-rs)
- * [SpeechPy MFCC in Rust](https://github.com/secretsauceai/mfcc-rust)
+    * [Precise Wakeword Model Maker](https://github.com/secretsauceai/precise-wakeword-model-maker) 
+    * [Precise TensorFlow Lite Engine](https://github.com/OpenVoiceOS/precise_lite_runner)
+    * [Precise Rust Engine](https://github.com/sheosi/precise-rs)
+    * [SpeechPy MFCC in Rust](https://github.com/secretsauceai/mfcc-rust)
