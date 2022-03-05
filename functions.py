@@ -85,7 +85,7 @@ def record(seconds, filename):
     wave_file.close()
     stream.stop_stream()
     stream.close()
-    print("Done")
+    print("Done\n")
 
 def zipfiles(file_name):
     zipObj = ZipFile(file_name, 'w')
@@ -98,29 +98,29 @@ def zipfiles(file_name):
 
 
 def collect_user_data():
-    print("""Welcome to the wake word collection tool!
-For best results when recording:
+    print("""\n\nWelcome to the wake word collection tool!
+\nFor best results when recording:
  * Pick a wake word(s) with at least three total syllables
  * Don't add pauses between words
- * Be normal, don't get too weird with your voice!
+ * Speak as you normally would, don't get too weird with your voice!
  * Record on the same mic and place as you intend to use the model
  * Be quiet when recording backgroind noise
 """)
     time.sleep(3)
-    wakeword = str(input("Please enter your wake word(s):\n"))
-    wakeword_parts = str(input("Please type in your wake word(s) as syllables seperated by comma (i.e. for 'hey jarvis':hey, jar, vis):\n"))
+    wakeword = str(input("\nPlease enter your wake word(s):\n"))
+    wakeword_parts = str(input("\nPlease type in your wake word(s) as syllables seperated by comma (i.e. for 'hey jarvis':hey, jar, vis):\n"))
     wakeword_split = wakeword_parts.split(', ')
-    name = str(input("Please enter in your first name or initials:\n"))
-    labels = str(input("Any other important labels for your data (i.e. mic)? (hit enter to skip)\n"))
+    name = str(input("\nPlease enter in your first name or initials:\n"))
+    labels = str(input("\nAny other important labels for your data (i.e. mic)? (hit enter to skip)\n"))
     slug = '%s_%s_%s' %  (wakeword.replace(" ", "_"), name.replace(" ", "_"), labels.replace(" ", "_"))
     
     return wakeword, wakeword_split, name, labels, slug
 
 def collect_background_noise(slug, nr):
-    print("Recording background noise in...")
+    print("\nRecording background noise in...")
     countdown(3)
     print("")
-    print("Recording background noise, please be quiet.")
+    print("\n● Recording background noise, please be quiet.")
     record(3, f'audio/not-wake-word/background/background_{slug}_0{nr}.wav')
     time.sleep(2.5)
 
@@ -130,7 +130,7 @@ def collect_wakewords(_from, _to, wakeword, slug):
         print(f'Say \'{wakeword}\' in...')
         countdown(3)
         print("")
-        print(wakeword)
+        print("● ".wakeword)
         record(3, f'audio/wake-word/{slug}_0{step}.wav')
 
 def collect_non_wakeword(index, slug):

@@ -18,16 +18,17 @@ The Wakeword Data Collector records wave files with a sample rate of `16000` for
 ## Installation
 As usual once you have cloned the repo, it is recommended to create and activate python virtual environment.
 ```console
-python -m venv .venv
+sudo apt-get install portaudio19-dev python-all-dev
+python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 
 ## Usage
 Simply run `collect_ide.py` in your console and follow the instructions.
 ```
-python collect_ide.py
+python3 collect_ide.py
 ```
 
 For a first time user, it is highly recommended to do a full data collection of all steps (besides `3. Non-wake-word recordings` which is optional) to ensure a production quality wakeword.
