@@ -16,9 +16,11 @@ The Wakeword Data Collector records wave files with a sample rate of `16000` for
    * other longer recordings: recording the TV and a natural conversation `audio/not-wake-word/`
 
 ## Installation
-As usual once you have cloned the repo, it is recommended to create and activate python virtual environment.
+You may have to install the pyaudio dependancy, ie:
+`sudo apt-get install portaudio19-dev`.
+
+As usual once you have cloned the repo, it is recommended to create and activate python virtual environment to install the requirements.
 ```console
-sudo apt-get install portaudio19-dev
 python3 -m venv .venv
 source .venv/bin/activate
 pip3 install -r requirements.txt
