@@ -1,7 +1,7 @@
 ![Secret Sauce AI](https://github.com/secretsauceai/secret_sauce_ai/blob/main/SSAI_logo_2.3_compressed_cropped.png?raw=true)
 # Wakeword Data Collector
 ![Wake word](https://github.com/secretsauceai/secret_sauce_ai/blob/main/SSAI_wakeword_scene_compressed.png?raw=true)
-## Do you want your own personal wake word?
+## Do you want your own personal wakeword?
 Wakeword Data Collector is a prototype CLI to record wakewords, non-wakewords, and background noise written in Python. Think of it as your wakeword data collection recipe for creating bullet proof wakeword models. It's part of the Secret Sauce AI [Wakeword Project](https://github.com/secretsauceai/secret_sauce_ai/wiki/Wakeword-Project).
 
 ![wakeword data collector wakeword collection example](https://github.com/secretsauceai/secret_sauce_ai/blob/main/SSAI_ww_collector_01.1.gif)
