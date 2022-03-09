@@ -38,7 +38,7 @@ cli_text = "Please enter your choice\n1. First set of 16 wake word recordings\n2
 
 while True:
 
-    print('To successfully use Wakeword recorder, there are 12 steps required\n')
+    print('\nTo successfully use Wakeword recorder, there are 12 steps required:\n')
     cli_choice = str(input(cli_text))
 
     if cli_choice == '1':

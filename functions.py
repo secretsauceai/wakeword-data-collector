@@ -85,7 +85,7 @@ def record(seconds, filename):
     wave_file.close()
     stream.stop_stream()
     stream.close()
-    print("Done")
+    print("Done\n")
 
 def zipfiles(file_name):
     zipObj = ZipFile(file_name, 'w')
@@ -98,40 +98,40 @@ def zipfiles(file_name):
 
 
 def collect_user_data():
-    print("""Welcome to the wake word collection tool!
-For best results when recording:
+    print("""\n\nWelcome to the wake word collection tool!
+\nFor best results when recording:
  * Pick a wake word(s) with at least three total syllables
  * Don't add pauses between words
- * Be normal, don't get too weird with your voice!
+ * Speak as you normally would, don't get too weird with your voice!
  * Record on the same mic and place as you intend to use the model
- * Be quiet when recording backgroind noise
+ * Be quiet when recording the background noise
 """)
     time.sleep(3)
-    wakeword = str(input("Please enter your wake word(s):\n"))
-    wakeword_parts = str(input("Please type in your wake word(s) as syllables seperated by comma (i.e. for 'hey jarvis':hey, jar, vis):\n"))
+    wakeword = str(input("\nPlease enter your wake word(s):\n"))
+    wakeword_parts = str(input("\nPlease type in your wake word(s) as syllables seperated by comma (i.e. for 'hey jarvis':hey, jar, vis):\n"))
     wakeword_split = wakeword_parts.split(', ')
-    name = str(input("Please enter in your first name or initials:\n"))
-    labels = str(input("Any other important labels for your data (i.e. mic)? (hit enter to skip)\n"))
+    name = str(input("\nPlease enter in your first name or initials to be used in sample file names:\n"))
+    labels = str(input("\nAny other important labels for your data (i.e. mic)? (hit enter to skip)\n"))
     slug = '%s_%s_%s' %  (wakeword.replace(" ", "_"), name.replace(" ", "_"), labels.replace(" ", "_"))
     
     return wakeword, wakeword_split, name, labels, slug
 
 def collect_background_noise(slug, nr):
-    print("Recording background noise in...")
+    print("\nRecording background noise in...")
     countdown(3)
     print("")
-    print("Recording background noise, please be quiet.")
-    record(3, f'audio/not-wake-word/background/background_{slug}_0{nr}.wav')
+    print("\n● Recording background noise, please be quiet.")
+    record(3, f'audio/not-wake-word/background/background_{slug}_{nr:03}.wav')
     time.sleep(2.5)
 
 def collect_wakewords(_from, _to, wakeword, slug):
     for step in range(_from, _to):
-        input(f"{step + 1}. When you are ready to record your wake word, press enter:")
+        input(f"{step + 1}/{_to}. When you are ready to record your wake word, press enter:")
         print(f'Say \'{wakeword}\' in...')
         countdown(3)
         print("")
-        print(wakeword)
-        record(3, f'audio/wake-word/{slug}_0{step}.wav')
+        print("● "+wakeword)
+        record(3, f'audio/wake-word/{slug}_{step:03}.wav')
 
 def collect_non_wakeword(index, slug):
     for i, phrase in enumerate(CALIBRATION_PHRASE_GREEN_ROOM):
@@ -175,14 +175,14 @@ def collect_wakeword_variations(slug, wakeword):
         input("When you are ready to record, press enter:")
         countdown(3)
         print("")
-        print(f'Say {wakeword}')
+        print(f'\n● Say {wakeword}')
         variation_index += 1
         record(3, f'audio/wake-word/variations/variation_{slug}_{variation_index}.wav')
 
         input("When you are ready to record, press enter:")
         countdown(3)
         print("")
-        print(f'Say {wakeword}')
+        print(f'\n● Say {wakeword}')
         variation_index += 1
         record(3, f'audio/wake-word/variations/variation_{slug}_{variation_index}.wav')
 
@@ -199,18 +199,18 @@ def collect_random_recording(slug, recording_type, recording_number):
     input("When you are ready to record, press enter:")
     countdown(3)
     print("")
-    print("recording...")
+    print("\n● Recording...")
     record(900, f'audio/random/random_{slug}_{recording_type}_{recording_number}.wav')
 
 def collect_wake_word_syllables(slug, wakeword_split):
     for syllable in wakeword_split:
+        print("\n********** Wakeword part: "+syllable+" ************\n")
         for count_number in range(1,5):
-            input("When you are ready to record, press enter:")
+            input(str(count_number)+"/4 When you are ready to record, press enter:")
             print(f'Say \'{syllable}\' in...')
             countdown(3)
-            print("")
-            print(syllable)
-            record(3, f'audio/not-wake-word/parts/{slug}_{syllable}_0{count_number}.wav')
+            print("\n● "+syllable)
+            record(3, f'audio/not-wake-word/parts/{slug}_{syllable}_{count_number:03}.wav')
 
 def collect_all_partial_wake_word_recording(slug, wakeword_split):
     # collect each syllable seperately 4 times (like collect_wake_word_syllables)
@@ -222,13 +222,13 @@ def collect_all_partial_wake_word_recording(slug, wakeword_split):
         number_of_syllables = len(wakeword_split)
         if next_syllable_index <= number_of_syllables:
             wake_word_part = ''.join(wakeword_split[syllable_index:syllable_index+ 2])
+            print("\n********** Wakeword part: "+wake_word_part+" ************\n")
             for count_number in range(1,5):
-                input("When you are ready to record, press enter:")
+                input(str(count_number)+"/4 When you are ready to record, press enter:")
                 print(f'Say \'{wake_word_part}\' in...')
                 countdown(3)
-                print("")
-                print(wake_word_part)
-                record(3, f'audio/not-wake-word/parts/{slug}_{wake_word_part}_0{count_number}.wav')
+                print("\n● "+wake_word_part)
+                record(3, f'audio/not-wake-word/parts/{slug}_{wake_word_part}_{count_number:03}.wav')
 
 def collect_partial_wakeword_recording(slug, i):
     input("When you are ready to record, press enter:")

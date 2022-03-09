@@ -18,16 +18,17 @@ The Wakeword Data Collector records wave files with a sample rate of `16000` for
 ## Installation
 As usual once you have cloned the repo, it is recommended to create and activate python virtual environment.
 ```console
-python -m venv .venv
+sudo apt-get install portaudio19-dev python-all-dev
+python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 
 ## Usage
 Simply run `collect_ide.py` in your console and follow the instructions.
 ```
-python collect_ide.py
+python3 collect_ide.py
 ```
 
 For a first time user, it is highly recommended to do a full data collection of all steps (besides `3. Non-wake-word recordings` which is optional) to ensure a production quality wakeword.
@@ -49,8 +50,9 @@ If you are doing a data collection to add another user it is recommended to reco
 
 
 ### IMPORTANT
+* It is recommended to use your production audio hardware and location to collect the samples.
 * It is best to use a wakeword with at least three syllables.
-* Make sure to check each recording, it is always possible something went wrong. Even one bad or missing recording can be the difference between a bullet proof and a bullet ridden wakeword model. 
+* Make sure to check each recording, it is always possible something went wrong. Even one bad or missing recording can be the difference between a bullet proof and a craptastic wakeword model. 
 * After collecting your data, it is highly recommended to run the [Precise Wakeword Model Maker](https://github.com/secretsauceai/precise-wakeword-model-maker).
 
 ## Secret Sauce AI
