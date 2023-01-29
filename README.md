@@ -23,14 +23,16 @@ As usual once you have cloned the repo, it is recommended to create and activate
 ```console
 python3 -m venv .venv
 source .venv/bin/activate
-pip3 install -r requirements.txt
+pip3 install -e .
 ```
+
+
 
 
 ## Usage
-Simply run `collect_ide.py` in your console and follow the instructions.
+Simply run `wakeword_collect` in your console and follow the instructions.
 ```
-python3 collect_ide.py
+wakeword_collect
 ```
 
 For a first time user, it is highly recommended to do a full data collection of all steps (besides `3. Non-wake-word recordings` which is optional) to ensure a production quality wakeword.
